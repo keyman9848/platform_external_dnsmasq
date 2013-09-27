@@ -18,6 +18,9 @@
 
 #ifdef HAVE_DBUS
 
+/* from bluez */
+#define dbus_watch_get_unix_fd dbus_watch_get_fd
+
 #include <dbus/dbus.h>
 
 const char* introspection_xml =

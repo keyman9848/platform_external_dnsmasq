@@ -8,10 +8,10 @@ LOCAL_SRC_FILES :=  bpf.c cache.c dbus.c dhcp.c dnsmasq.c forward.c helper.c lea
 
 LOCAL_MODULE := dnsmasq
 
-LOCAL_C_INCLUDES := external/dnsmasq/src
-
+LOCAL_C_INCLUDES := external/dnsmasq/src external/dbus/
+LOCAL_MODULE_TAGS := optional
 LOCAL_CFLAGS := -O2 -g -W -Wall -D__ANDROID__ -DNO_IPV6 -DNO_TFTP -DNO_SCRIPT
-LOCAL_SYSTEM_SHARED_LIBRARIES := libc libcutils
+LOCAL_SYSTEM_SHARED_LIBRARIES := libc libcutils libdbus
 
 include $(BUILD_EXECUTABLE)
 
